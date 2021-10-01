@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.skripsi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Ahad"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.noActionBar">
+        <activity android:name=".detailmonActivity"></activity>
+        <activity android:name=".OrtuActivity" />
+        <activity android:name=".AmalanActivity" />
+        <activity android:name=".SantriActivity" />
+        <activity android:name=".MonitoringActivity" />
+        <activity android:name=".AwalActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

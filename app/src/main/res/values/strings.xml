@@ -7,8 +7,12 @@
     <string-array name="level">
         <item>Pilih Role :</item>
         <item>Santri</item>
-        <item>Orang Tua</item>
+        <item>OrangTua</item>
         <item>Mentor</item>
     </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 </resources>

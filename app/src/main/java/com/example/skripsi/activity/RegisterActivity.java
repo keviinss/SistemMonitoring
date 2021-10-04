@@ -85,15 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
         phone = findViewById(R.id.noHp);
         registerBtn = findViewById(R.id.btnRegister);
         level = findViewById(R.id.level);
-        /*cbMentor = findViewById(R.id.cbMentor);
-        cbOrtu = findViewById(R.id.cbOrtu);
-        cbSantri = findViewById(R.id.cbSantri);*/
-
-        checkField(user);
-        checkField(password);
-        checkField(fullName);
-        checkField(phone);
-
     }
 
     public boolean checkField(EditText textField){

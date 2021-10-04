@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".activity.RegisterActivity">
 
     <TextView
         android:id="@+id/topText"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputUser" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/noHp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -79,6 +79,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputNama" />
+
+    <Spinner
+        android:id="@+id/level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:entries="@array/level"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noHp" />
 
     <EditText
         android:id="@+id/inputNama"
@@ -101,8 +121,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
+    <!--<CheckBox
+        android:id="@+id/cbSantri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -114,11 +134,11 @@
         android:text="Santri"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintStart_toEndOf="@+id/cbOrtu"
+        app:layout_constraintTop_toBottomOf="@+id/noHp" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/cbOrtu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -129,12 +149,12 @@
         android:buttonTint="@color/colorPrimary"
         android:text="Orang Tua Santri"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox2"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintEnd_toStartOf="@+id/cbSantri"
+        app:layout_constraintStart_toEndOf="@+id/cbMentor"
+        app:layout_constraintTop_toBottomOf="@+id/noHp" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbMentor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -145,9 +165,9 @@
         android:buttonTint="@color/colorPrimary"
         android:text="Mentor"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox3"
+        app:layout_constraintEnd_toStartOf="@+id/cbOrtu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/noHp" />-->
 
     <Button
         android:id="@+id/btnRegister"

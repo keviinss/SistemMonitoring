@@ -1,35 +1,30 @@
-package com.example.skripsi;
+package com.example.skripsi.activity;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.skripsi.R;
 
-public class RegisterActivity extends AppCompatActivity {
-    EditText user,password,fullName,phone;
-    Button registerBtn;
+public class LoginActivity extends AppCompatActivity {
+    EditText user,password;
+    Button loginBtn;
     boolean valid = true;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
+        setContentView(R.layout.activity_login);
 
         user = findViewById(R.id.inputUser);
         password = findViewById(R.id.inputPassword);
-        fullName = findViewById(R.id.inputNama);
-        phone = findViewById(R.id.editTextPhone);
-        registerBtn = findViewById(R.id.btnRegister);
-
+        loginBtn = findViewById(R.id.btnLogin);
 
         checkField(user);
         checkField(password);
-        checkField(fullName);
-        checkField(phone);
-
     }
 
     public boolean checkField(EditText textField){

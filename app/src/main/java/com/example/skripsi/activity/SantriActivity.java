@@ -1,14 +1,16 @@
-package com.example.skripsi;
+package com.example.skripsi.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MonitoringActivity extends AppCompatActivity {
+import com.example.skripsi.R;
+
+public class SantriActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_monitoring);
+        setContentView(R.layout.activity_santri);
     }
 }

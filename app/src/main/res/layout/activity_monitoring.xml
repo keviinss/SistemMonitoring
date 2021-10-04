@@ -30,7 +30,7 @@
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <TextView
+           <!-- <TextView
                 android:id="@+id/textUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf=""
                 app:layout_constraintTop_toTopOf="parent" />
-
+-->
             <ImageView
                 android:id="@+id/image_Menu"
                 android:layout_width="30dp"
@@ -54,7 +54,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textUsername"
                 app:tint="@color/white"
-                android:layout_marginRight="15dp" />
+                android:layout_marginRight="15dp"
+                tools:ignore="UnknownId" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +73,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:background="@null"
-                    android:hint="@string/search_elements"
+                    android:hint="Search"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:paddingStart="15dp"

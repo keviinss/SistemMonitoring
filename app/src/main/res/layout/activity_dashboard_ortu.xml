@@ -37,34 +37,50 @@
         app:srcCompat="@drawable/ic_exit"
         tools:ignore="VectorDrawableCompat" />
 
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="40dp"
+        android:text="Hallo Orang Tua,"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageNotif"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="75dp"
+        android:text="user"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageNotif"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageNotif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="7dp"
         android:layout_marginRight="7dp"
         android:contentDescription="notif"
-        app:layout_constraintEnd_toStartOf="@+id/imageexit"
+        app:layout_constraintEnd_toStartOf="@+id/imageExit"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_notif"
         tools:ignore="VectorDrawableCompat" />
 
-    <TextView
-        android:id="@+id/topText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
-        android:text="Hallo Orang Tua"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/topView"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="32dp" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"

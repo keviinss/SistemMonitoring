@@ -81,8 +81,6 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (password.isEmpty()) {
                     inputPassword.setError("Password wajib diisi");
                     return;
-                } else if (password.length() < 6) {
-                    inputPassword.setError("Password minimal terdiri dari 6 karakter");
                 } else {
 
                 }

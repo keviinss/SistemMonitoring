@@ -115,6 +115,13 @@ public class LoginActivity extends AppCompatActivity {
                             //GET DATA LEVEL
                             MyPreferences.getEditorPreferences()
                                     .putString(MyPreferences.LEVEL, userData.getLevel());
+                            //GET DATA NAMA SANTRI
+                            MyPreferences.getEditorPreferences()
+                                    .putString(MyPreferences.NAMASANTRI, userData.getNamaSantri());
+                            //GET DATA KODE SANTRI
+                            MyPreferences.getEditorPreferences()
+                                    .putString(MyPreferences.KODESANTRI, userData.getKodeSantri());
+
 
                             progressDialog.setMessage("Mohon Tunggu");
                             progressDialog.show();
@@ -154,6 +161,12 @@ public class LoginActivity extends AppCompatActivity {
                             //GET DATA LEVEL
                             MyPreferences.getEditorPreferences()
                                     .putString(MyPreferences.LEVEL, userData.getLevel());
+                            //GET DATA NAMA SANTRI
+                            MyPreferences.getEditorPreferences()
+                                    .putString(MyPreferences.NAMASANTRI, userData.getNamaSantri());
+                            //GET DATA KODE SANTRI
+                            MyPreferences.getEditorPreferences()
+                                    .putString(MyPreferences.KODESANTRI, userData.getKodeSantri());
 
                             progressDialog.setMessage("Mohon Tunggu");
                             progressDialog.show();

@@ -49,6 +49,8 @@ public class AdapterUserData extends RecyclerView.Adapter<AdapterUserData.MyView
             holder.txtUsername.setText(userData.getUsername());
             holder.txtPassword.setText(userData.getPassword());
             holder.txtNama.setText(userData.getNamaLengkap());
+            holder.txtSantri.setText(userData.getNamaSantri());
+            holder.txtKodeSantri.setText(userData.getKodeSantri());
             holder.txtNoHp.setText(userData.getNoHP());
             holder.txtLevel.setText(userData.getLevel());
 
@@ -69,6 +71,8 @@ public class AdapterUserData extends RecyclerView.Adapter<AdapterUserData.MyView
                 i.putExtra("username", userData.getUsername());
                 i.putExtra("password", userData.getPassword());
                 i.putExtra("namaLengkap", userData.getNamaLengkap());
+                i.putExtra("namaSantri", userData.getNamaSantri());
+                i.putExtra("kodeSantri", userData.getKodeSantri());
                 i.putExtra("noHP", userData.getNoHP());
                 i.putExtra("level", userData.getLevel());
                 v.getContext().startActivity(i);
@@ -82,7 +86,7 @@ public class AdapterUserData extends RecyclerView.Adapter<AdapterUserData.MyView
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtUsername, txtPassword, txtNama, txtNoHp, txtLevel;
+        TextView txtUsername, txtPassword, txtNama, txtNoHp, txtLevel,txtSantri,txtKodeSantri;
         CardView cardView;
         Button btnHapus, btnUbah;
 
@@ -96,6 +100,8 @@ public class AdapterUserData extends RecyclerView.Adapter<AdapterUserData.MyView
             btnHapus = itemView.findViewById(R.id.btnHapus);
             btnUbah = itemView.findViewById(R.id.btnUbah);
             cardView = itemView.findViewById(R.id.cardView);
+            txtKodeSantri = itemView.findViewById(R.id.txtKodeSantri);
+            txtSantri = itemView.findViewById(R.id.txtNamaSantri);
         }
     }
 }

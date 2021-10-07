@@ -1,6 +1,7 @@
 package com.example.skripsi.activity.ortu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import com.example.skripsi.services.MyPreferences;
 
 public class DashboardOrtu extends AppCompatActivity {
     ImageView imageExit;
+    CardView menuAmalan,menuPesan,menuDonasi,menuPerkembangan;
     TextView user;
 
     @Override
@@ -40,5 +42,13 @@ public class DashboardOrtu extends AppCompatActivity {
     private void initView() {
         imageExit = findViewById(R.id.imageExit);
         user = findViewById(R.id.user);
+        menuAmalan = findViewById(R.id.amalanMenu);
+        menuAmalan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),InputAmalanYaumiyah.class);
+                startActivity(intent);
+            }
+        });
     }
 }

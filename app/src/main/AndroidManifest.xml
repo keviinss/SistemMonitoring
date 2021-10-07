@@ -3,6 +3,8 @@
     package="com.example.skripsi">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
         <activity android:name=".activity.update.UpdateUserData"></activity>
-        <activity android:name=".adapter.AdapterUserData" />
         <activity android:name=".activity.retrieve.RetrieveUserData" />
         <activity android:name=".activity.SplashScreen">
             <intent-filter>
@@ -22,7 +23,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.santri.DashboardSantri" />
+        //MENU ORTU
         <activity android:name=".activity.ortu.DashboardOrtu" />
+        <activity android:name=".activity.ortu.InputAmalanYaumiyah"/>
+        <activity android:name=".activity.ortu.TambahAmalanYaumiyah"/>
+        <activity android:name=".activity.retrieve.RetrieveKategoriAmalanYaumiyah"/>
+        //
         <activity android:name=".activity.mentor.DashboardMentor" />
         <activity android:name=".activity.detailmonActivity" />
         <activity android:name=".activity.AmalanActivity" />

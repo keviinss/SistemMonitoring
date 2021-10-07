@@ -119,12 +119,80 @@
                     android:text="nama"
                     android:textSize="16dp" />
             </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/kanvas_NAMASANTRI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/kanvas_NAMA">
+
+                <TextView
+                    android:id="@+id/id_NAMASANTRI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Nama Santri"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/titik8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/id_NAMASANTRI"
+                    android:layout_marginLeft="130dp"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtNamaSantri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/titik8"
+                    android:layout_marginLeft="135dp"
+                    android:padding="5dp"
+                    android:text="nama santri"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/kanvas_KODESANTRI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/kanvas_NAMASANTRI">
+
+                <TextView
+                    android:id="@+id/id_KODESANTRI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Kode Santri"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/titik7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/id_KODESANTRI"
+                    android:layout_marginLeft="130dp"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtKodeSantri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/titik7"
+                    android:layout_marginLeft="135dp"
+                    android:padding="5dp"
+                    android:text="kode santri"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
 
             <RelativeLayout
                 android:id="@+id/kanvas_NOHP"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/kanvas_NAMA">
+                android:layout_below="@id/kanvas_KODESANTRI">
 
                 <TextView
                     android:id="@+id/id_NOHP"

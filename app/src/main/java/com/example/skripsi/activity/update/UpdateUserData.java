@@ -16,10 +16,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class UpdateUserData extends AppCompatActivity {
-    EditText inputUser, inputPassword, inputNama, noHandphone;
+    EditText inputUser, inputPassword, inputNama, noHandphone,santri,kodesantri;
     Spinner spLevel;
     Button btnUpdate;
-    String userId, username, password, namaLengkap, noHP, level;
+    String userId, username, password, namaLengkap,getSantri,getKodeSantri, noHP, level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +33,16 @@ public class UpdateUserData extends AppCompatActivity {
         username = intent.getStringExtra("username");
         password = intent.getStringExtra("password");
         namaLengkap = intent.getStringExtra("namaLengkap");
+        getSantri = intent.getStringExtra("namaSantri");
+        getKodeSantri = intent.getStringExtra("kodeSantri");
         noHP = intent.getStringExtra("noHP");
         level = intent.getStringExtra("level");
 
         inputUser.setText(username);
         inputPassword.setText(password);
         inputNama.setText(namaLengkap);
+        santri.setText(getSantri);
+        kodesantri.setText(getKodeSantri);
         noHandphone.setText(noHP);
         if (level.equals("Santri")){
             spLevel.setSelection(1);
@@ -54,15 +58,17 @@ public class UpdateUserData extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
-                String username, password, namaLengkap, noHP, level;
+                String username, password, namaLengkap,namaSantri,kodeSantri, noHP, level;
 
                 username = inputUser.getText().toString();
                 password = inputPassword.getText().toString();
                 namaLengkap = inputNama.getText().toString();
+                namaSantri = santri.getText().toString();
+                kodeSantri = kodesantri.getText().toString();
                 noHP = noHandphone.getText().toString();
                 level = spLevel.getSelectedItem().toString();
 
-                Users userData = new Users(userId,username, password, namaLengkap, noHP, level);
+                Users userData = new Users(userId,username, password, namaLengkap,namaSantri,kodeSantri,noHP, level);
                 databaseReference.setValue(userData);
                 Toast.makeText(UpdateUserData.this, "Data Berhasil Diupdate",Toast.LENGTH_SHORT).show();
                 onBackPressed();
@@ -78,5 +84,8 @@ public class UpdateUserData extends AppCompatActivity {
         noHandphone = findViewById(R.id.noHp);
         spLevel = findViewById(R.id.level);
         btnUpdate = findViewById(R.id.btnUpdate);
+        santri = findViewById(R.id.inputNamaSantri);
+        kodesantri = findViewById(R.id.inputKodeSantri);
+
     }
 }

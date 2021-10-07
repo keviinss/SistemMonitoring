@@ -17,6 +17,8 @@ public class MyPreferences {
     public static final String NAMALENGKAP = "NAMALENGKAP";
     public static final String NOHP = "NOHP";
     public static final String LEVEL = "LEVEL";
+    public static final String NAMASANTRI = "NAMASANTRI";
+    public static final String KODESANTRI = "KODESANTRI";
 
 
     public MyPreferences(Context context) {

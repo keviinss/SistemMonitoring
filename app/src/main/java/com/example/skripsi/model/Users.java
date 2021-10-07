@@ -5,19 +5,39 @@ public class Users {
     String username;
     String password;
     String namaLengkap;
+    String namaSantri;
+    String kodeSantri;
     String noHP;
     String level;
 
-    public Users(String userId, String username, String password, String namaLengkap, String noHP, String level) {
+    public Users(String userId, String username, String password, String namaLengkap,String namaSantri,String kodeSantri, String noHP, String level) {
         this.userId = userId;
         this.username = username;
         this.password = password;
         this.namaLengkap = namaLengkap;
+        this.namaSantri = namaSantri;
+        this.kodeSantri = kodeSantri;
         this.noHP = noHP;
         this.level = level;
     }
 
     public Users() {
+    }
+
+    public String getNamaSantri() {
+        return namaSantri;
+    }
+
+    public void setNamaSantri(String namaSantri) {
+        this.namaSantri = namaSantri;
+    }
+
+    public String getKodeSantri() {
+        return kodeSantri;
+    }
+
+    public void setKodeSantri(String kodeSantri) {
+        this.kodeSantri = kodeSantri;
     }
 
     public String getUserId() {

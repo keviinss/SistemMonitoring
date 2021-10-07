@@ -1,6 +1,7 @@
 package com.example.skripsi.activity.mentor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import com.example.skripsi.services.MyPreferences;
 
 public class DashboardMentor extends AppCompatActivity {
     ImageView imageExit;
-    LinearLayout LLKelolaAkun;
+    CardView akunMenu;
     TextView user;
 
     @Override
@@ -39,7 +40,7 @@ public class DashboardMentor extends AppCompatActivity {
             }
         });
 
-        LLKelolaAkun.setOnClickListener(new View.OnClickListener() {
+        akunMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RetrieveUserData.class);
@@ -51,7 +52,7 @@ public class DashboardMentor extends AppCompatActivity {
 
     private void initView() {
         imageExit = findViewById(R.id.imageExit);
-        LLKelolaAkun = findViewById(R.id.LLKelolaAkun);
+        akunMenu = findViewById(R.id.akunMenu);
         user = findViewById(R.id.user);
     }
 }

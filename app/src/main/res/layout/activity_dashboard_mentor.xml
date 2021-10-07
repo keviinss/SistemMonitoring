@@ -57,7 +57,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="40dp"
-        android:text="Hallo Mentor,"
+        android:text="Hallo,"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -86,44 +86,27 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:overScrollMode="never"
-        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view5">
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:id="@+id/layoutGoal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:background="@drawable/white_rectangle_background"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="15dp"
-                app:layout_constraintDimensionRatio="H, 1:1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </LinearLayout>
-
             <GridLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:alignmentMode="alignMargins"
                 android:columnCount="2"
-                android:columnOrderPreserved="false"
-                android:rowCount="3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:rowCount="2"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                >
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/monitoringMenu"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
@@ -147,16 +130,19 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="Monitoring"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_horizontal"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/akunMenu"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
@@ -164,7 +150,6 @@
                     app:cardElevation="6dp">
 
                     <LinearLayout
-                        android:id="@+id/LLKelolaAkun"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
@@ -174,88 +159,97 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/datauser" />
+                            android:src="@drawable/ic_people" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="Kelola Akun"
+                            android:layout_gravity="center_horizontal"
+                            android:textAlignment="center"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="18sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!--                <androidx.cardview.widget.CardView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_rowWeight="1"-->
-                <!--                    android:layout_columnWeight="1"-->
-                <!--                    android:layout_margin="12dp"-->
-                <!--                    app:cardCornerRadius="12dp"-->
-                <!--                    app:cardElevation="6dp">-->
 
-                <!--                    <LinearLayout-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="match_parent"-->
-                <!--                        android:gravity="center"-->
-                <!--                        android:orientation="vertical"-->
-                <!--                        android:padding="16dp">-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pesanSantriMenu"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
 
-                <!--                        <ImageView-->
-                <!--                            android:layout_width="80dp"-->
-                <!--                            android:layout_height="80dp"-->
-                <!--                            android:src="@drawable/masjid" />-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <!--                        <TextView-->
-                <!--                            android:layout_width="wrap_content"-->
-                <!--                            android:layout_height="wrap_content"-->
-                <!--                            android:layout_marginTop="12dp"-->
-                <!--                            android:text="Donasi"-->
-                <!--                            android:textColor="@color/colorPrimary"-->
-                <!--                            android:textSize="18sp" />-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/amal" />
 
-                <!--                    </LinearLayout>-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Pesan Santri"
+                            android:layout_gravity="center_horizontal"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
 
-                <!--                </androidx.cardview.widget.CardView>-->
+                    </LinearLayout>
 
-                <!--                <androidx.cardview.widget.CardView-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_rowWeight="1"-->
-                <!--                    android:layout_columnWeight="1"-->
-                <!--                    android:layout_margin="12dp"-->
-                <!--                    app:cardCornerRadius="12dp"-->
-                <!--                    app:cardElevation="6dp">-->
+                </androidx.cardview.widget.CardView>
 
-                <!--                    <LinearLayout-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="match_parent"-->
-                <!--                        android:gravity="center"-->
-                <!--                        android:orientation="vertical"-->
-                <!--                        android:padding="16dp">-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/perkembanganSantriMenu"
+                    android:layout_width="150dp"
+                    android:layout_height="180dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp">
 
-                <!--                        <ImageView-->
-                <!--                            android:layout_width="80dp"-->
-                <!--                            android:layout_height="80dp"-->
-                <!--                            android:src="@drawable/masjid" />-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-                <!--                        <TextView-->
-                <!--                            android:layout_width="wrap_content"-->
-                <!--                            android:layout_height="wrap_content"-->
-                <!--                            android:layout_marginTop="12dp"-->
-                <!--                            android:text="Perkembangan"-->
-                <!--                            android:textColor="@color/colorPrimary"-->
-                <!--                            android:textSize="18sp" />-->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/statistic" />
 
-                <!--                    </LinearLayout>-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Perkembangan Santri"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
 
-                <!--                </androidx.cardview.widget.CardView>-->
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
             </GridLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
     </ScrollView>
 

@@ -17,10 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText user,password,fullName,phone;
+    EditText user,password,fullName,phone,santri,kodesantri;
     Spinner level;
     Button registerBtn;
-    CheckBox cbMentor, cbOrtu, cbSantri;
     DatabaseReference databaseReference;
     boolean valid = true;
 
@@ -28,7 +27,6 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         init();
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -36,12 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userId, xUsername, xPassword, xNamaLengkap, xNoHp, xLevel;
+                String userId, xUsername, xPassword, xNamaLengkap,xNamaSantri,xKodeSantri, xNoHp, xLevel;
 
                 userId = databaseReference.push().getKey();
                 xUsername = user.getText().toString();
                 xPassword = password.getText().toString();
                 xNamaLengkap = fullName.getText().toString();
+                xNamaSantri = santri.getText().toString();
+                xKodeSantri = kodesantri.getText().toString();
                 xNoHp = phone.getText().toString();
                 xLevel = level.getSelectedItem().toString();
 
@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Wajib Di Isi !!!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Users users = new Users(userId, xUsername, xPassword, xNamaLengkap, xNoHp, xLevel);
+                    Users users = new Users(userId, xUsername, xPassword, xNamaLengkap,xNamaSantri,xKodeSantri,xNoHp, xLevel);
                     databaseReference.child(userId).setValue(users);
                     Toast.makeText(RegisterActivity.this, "Data Berhasil Ditambahkan", Toast.LENGTH_SHORT).show();
 
@@ -69,6 +69,8 @@ public class RegisterActivity extends AppCompatActivity {
                     user.setText("");
                     password.setText("");
                     fullName.setText("");
+                    santri.setText("");
+                    kodesantri.setText("");
                     phone.setText("");
                     level.setSelection(0);
                     onBackPressed();
@@ -85,6 +87,8 @@ public class RegisterActivity extends AppCompatActivity {
         phone = findViewById(R.id.noHp);
         registerBtn = findViewById(R.id.btnRegister);
         level = findViewById(R.id.level);
+        santri = findViewById(R.id.inputNamaSantri);
+        kodesantri = findViewById(R.id.inputKodeSantri);
     }
 
     public boolean checkField(EditText textField){

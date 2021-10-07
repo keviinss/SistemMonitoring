@@ -5,6 +5,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class FirebaseUtils {
     public static final String ACCOUNTS_PATH = "Users";
+    public static final String AMALANYAUMIYAH_PATH = "AmalanYaumiyah";
+    public static final String AMALANYAUMIYAHSANTRI_PATH = "AmalanYaumiyahSantri";
 
     private static final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 

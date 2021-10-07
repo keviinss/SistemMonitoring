@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.skripsi">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar">
-        <activity android:name=".activity.update.UpdateUserData"></activity>
+        <activity android:name=".adapter.AdapterDonasi"
+            tools:ignore="Instantiatable"></activity>
+        <activity android:name=".activity.retrieve.RetrieveDonasi" />
+        <activity android:name=".activity.ortu.TambahDonasi" />
+        <activity android:name=".activity.update.UpdateUserData" />
         <activity android:name=".activity.retrieve.RetrieveUserData" />
         <activity android:name=".activity.SplashScreen">
             <intent-filter>
@@ -23,12 +28,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.santri.DashboardSantri" />
-        //MENU ORTU
         <activity android:name=".activity.ortu.DashboardOrtu" />
-        <activity android:name=".activity.ortu.InputAmalanYaumiyah"/>
-        <activity android:name=".activity.ortu.TambahAmalanYaumiyah"/>
-        <activity android:name=".activity.retrieve.RetrieveKategoriAmalanYaumiyah"/>
-        //
+        <activity android:name=".activity.ortu.InputAmalanYaumiyah" />
+        <activity android:name=".activity.ortu.TambahAmalanYaumiyah" />
+        <activity android:name=".activity.retrieve.RetrieveKategoriAmalanYaumiyah" />
         <activity android:name=".activity.mentor.DashboardMentor" />
         <activity android:name=".activity.detailmonActivity" />
         <activity android:name=".activity.AmalanActivity" />

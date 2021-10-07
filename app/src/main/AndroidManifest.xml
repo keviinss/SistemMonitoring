@@ -37,6 +37,11 @@
         <activity android:name=".activity.AwalActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.retrieve.RetrievePesanSantri" />
+        <activity android:name=".activity.mentor.EditPesanSantri" />
+        <activity android:name=".activity.mentor.InputPesanSantri" />
+        <activity android:name=".activity.retrieve.RetrieveDonasi" />
+        <activity android:name=".activity.ortu.TambahDonasi" />
     </application>
 
 </manifest>

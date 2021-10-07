@@ -26,6 +26,26 @@
                 android:layout_below="@id/kanvas_NAMA">
 
                 <TextView
+                    android:id="@+id/txtLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/ttxtSantri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Santri"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtMentor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mentor"
+                    android:visibility="gone" />
+
+                <TextView
                     android:id="@+id/id_NAMASANTRI"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.skripsi.R;
 import com.example.skripsi.activity.SplashScreen;
 import com.example.skripsi.activity.retrieve.RetrieveDonasi;
+import com.example.skripsi.activity.retrieve.RetrievePesanSantri;
 import com.example.skripsi.services.MyPreferences;
 
 public class DashboardOrtu extends AppCompatActivity {
@@ -20,6 +21,7 @@ public class DashboardOrtu extends AppCompatActivity {
     CardView menuAmalan,menuPesan,menuDonasi,menuPerkembangan;
     TextView user;
     LinearLayout LLDonasi;
+    CardView pesanmentorMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class DashboardOrtu extends AppCompatActivity {
         user = findViewById(R.id.user);
         LLDonasi = findViewById(R.id.LLDonasi);
         menuAmalan = findViewById(R.id.amalanMenu);
+        pesanmentorMenu = findViewById(R.id.pesanmentorMenu);
 
         menuAmalan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +63,14 @@ public class DashboardOrtu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RetrieveDonasi.class);
+                startActivity(intent);
+            }
+        });
+
+        pesanmentorMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RetrievePesanSantri.class);
                 startActivity(intent);
             }
         });

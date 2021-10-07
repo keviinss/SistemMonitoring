@@ -12,12 +12,14 @@ import android.widget.TextView;
 
 import com.example.skripsi.R;
 import com.example.skripsi.activity.SplashScreen;
+import com.example.skripsi.activity.retrieve.RetrieveMonitoringAmalanYaumiyah;
+import com.example.skripsi.activity.retrieve.RetrievePesanSantri;
 import com.example.skripsi.activity.retrieve.RetrieveUserData;
 import com.example.skripsi.services.MyPreferences;
 
 public class DashboardMentor extends AppCompatActivity {
     ImageView imageExit;
-    CardView akunMenu;
+    CardView akunMenu,monitoringMenu,pesansantriMenu,perkembanganMenu;
     TextView user;
 
     @Override
@@ -44,6 +46,34 @@ public class DashboardMentor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), RetrieveUserData.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        pesansantriMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RetrievePesanSantri.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        perkembanganMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RetrieveUserData.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
+
+        monitoringMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RetrieveMonitoringAmalanYaumiyah.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
@@ -53,6 +83,9 @@ public class DashboardMentor extends AppCompatActivity {
     private void initView() {
         imageExit = findViewById(R.id.imageExit);
         akunMenu = findViewById(R.id.akunMenu);
+        monitoringMenu = findViewById(R.id.monitoringMenu);
+        pesansantriMenu = findViewById(R.id.pesanSantriMenu);
+        perkembanganMenu = findViewById(R.id.perkembanganSantriMenu);
         user = findViewById(R.id.user);
     }
 }

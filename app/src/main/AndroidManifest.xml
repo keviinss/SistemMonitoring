@@ -28,8 +28,13 @@
         <activity android:name=".activity.ortu.InputAmalanYaumiyah"/>
         <activity android:name=".activity.ortu.TambahAmalanYaumiyah"/>
         <activity android:name=".activity.retrieve.RetrieveKategoriAmalanYaumiyah"/>
-        //
+        //MENU MENTOR
         <activity android:name=".activity.mentor.DashboardMentor" />
+        <activity android:name=".activity.retrieve.RetrieveMonitoringAmalanYaumiyah"/>
+        <activity android:name=".activity.retrieve.RetrievePesanSantri"/>
+        <activity android:name=".activity.mentor.InputPesanSantri"/>
+        <activity android:name=".activity.mentor.EditPesanSantri"/>
+        //
         <activity android:name=".activity.detailmonActivity" />
         <activity android:name=".activity.AmalanActivity" />
         <activity android:name=".activity.SantriActivity" />

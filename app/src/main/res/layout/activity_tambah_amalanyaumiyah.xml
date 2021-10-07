@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AmalanActivity">
+
+    <ImageView
+        android:id="@+id/imgMasjid"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/masjid" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAMBAH DATA AMALAN YAUMIYAH"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_below="@id/imgMasjid"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <EditText
+        android:id="@+id/namaAmalan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/txt"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_border"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Masukan Nama Amalan Yaumiyah"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaAmalan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/round_bg"
+        android:backgroundTint="@color/colorBlue"
+        android:text="SIMPAN"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/daftarAmalan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSimpan"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_bg"
+        android:text="Lihat Daftar Amalan Yaumiyah"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
